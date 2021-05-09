@@ -65,7 +65,20 @@ namespace ApiRest.Controllers
         [HttpGet]
         public IActionResult Listar(string dto)
         {
-
+            //IUsuariosServices
+            List<IUsuariosServices> list = _usuariosServices.Listar(dto);
+            for(int i=0; i<list.size; i++)
+            {
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).id);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).nombre);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).apellido);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).saldo);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).fecha);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).cuenta);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).clave);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).rol);
+                list.GetEnumerator(i).id = Encrypt(list.GetEnumerator(i).cedula);
+            }
             return Ok(_usuariosServices.Listar(dto));
         }
 
