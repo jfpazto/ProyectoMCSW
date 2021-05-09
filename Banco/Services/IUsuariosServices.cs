@@ -9,7 +9,7 @@ namespace ApiRest.Services
     public interface IUsuariosServices
     {
         List<Usuarios> Imprime();
-        List<Usuarios> Listar(string dto);
+        String Listar(string dto);
         List<Usuarios> LCuenta(string dto);
         Usuarios Insert(Usuarios dto);
 

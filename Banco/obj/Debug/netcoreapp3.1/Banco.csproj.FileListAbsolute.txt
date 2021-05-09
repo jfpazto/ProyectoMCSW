@@ -120,3 +120,5 @@ C:\Users\jfpaz\Documents\MCSW\PROYECTO\BancosMCSW-1fc8d191b6729416c0827604b47acf
 C:\Users\jfpaz\Documents\MCSW\PROYECTO\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\Banco\obj\Debug\netcoreapp3.1\Banco.dll
 C:\Users\jfpaz\Documents\MCSW\PROYECTO\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\Banco\obj\Debug\netcoreapp3.1\Banco.pdb
 C:\Users\jfpaz\Documents\MCSW\PROYECTO\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\BancosMCSW-1fc8d191b6729416c0827604b47acf2f89d99159\Banco\obj\Debug\netcoreapp3.1\Banco.genruntimeconfig.cache
+C:\Users\Lenovo\Documents\ECI\Noveno\MCSW\ProyectoMCSW\Banco\obj\Debug\netcoreapp3.1\Banco.dll
+C:\Users\Lenovo\Documents\ECI\Noveno\MCSW\ProyectoMCSW\Banco\obj\Debug\netcoreapp3.1\Banco.pdb

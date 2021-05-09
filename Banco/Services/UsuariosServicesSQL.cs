@@ -37,15 +37,15 @@ namespace ApiRest.Services
             return dto;
         }
 
-        public List<Usuarios> Listar(string dto)
+        public String Listar(string dto)
         {
-            List<Usuarios> peer = dbBancos.Usuarios.FromSqlRaw($"SELECT * from Usuarios").ToList();
+            String peer = dbBancos.Usuarios.FromSqlRaw($"SELECT * from Usuarios");
             try
             {
                 var user = new SqlParameter("cc", dto);
-                var query = dbBancos.Usuarios.FromSqlRaw($"SELECT * from Usuarios where cedula=@cc", user).ToList();
+                var query = dbBancos.Usuarios.FromSqlRaw($"SELECT * from Usuarios where cedula=@cc", user);
                 string clave = query[0].clave;
-                peer = query;
+                peer = Encrypt(query);
             }
             catch
             { }
