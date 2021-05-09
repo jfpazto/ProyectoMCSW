@@ -53,7 +53,7 @@ namespace BancoEscritorio
                 saldo = txt_saldo.Text,
                 fecha = DateTime.Today,
                 cuenta = txt_cuenta.Text,
-                clave = "",
+                clave = txt_clave.Text,
                 rol = txt_rol.Text,
                 cedula = txt_cedula.Text
 
@@ -80,6 +80,11 @@ namespace BancoEscritorio
             AgregaFondos frm_fondos = new AgregaFondos();
             frm_fondos.MdiParent = this.MdiParent;
             frm_fondos.Show();
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

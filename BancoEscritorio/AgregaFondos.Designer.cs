@@ -73,6 +73,7 @@
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(100, 20);
             this.txt_cedula.TabIndex = 12;
+            this.txt_cedula.TextChanged += new System.EventHandler(this.txt_cedula_TextChanged);
             // 
             // txt_monto
             // 

@@ -166,6 +166,12 @@ namespace BancoEscritorio
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Solo puede registrar un usuraio administrador");
+            /*
+            Registro frm_fondos = new Registro();
+            frm_fondos.MdiParent = this.MdiParent;
+            frm_fondos.Show();
+            
             try {
                 this.getUsuarios();
                 so.clave = txt_clave.Text;
@@ -174,7 +180,7 @@ namespace BancoEscritorio
             }
             catch {
                 MessageBox.Show("ERROR");
-            }
+            }*/
 
             
         }

@@ -104,10 +104,30 @@ namespace BancoEscritorio
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            this.getUsuarios();
-            so.saldo = txt_monto.Text;
-            string url = "http://localhost:65036/api/Usuarios/Actualizar";
-            string result = putSaldo(url, this.so);
+            try
+            {
+                if (System.Convert.ToInt32(txt_monto.Text) > 0 && System.Convert.ToInt32(txt_cedula) > 0)
+                {
+                    this.getUsuarios();
+                    so.saldo = txt_monto.Text;
+                    string url = "http://localhost:65036/api/Usuarios/Actualizar";
+                    string result = putSaldo(url, this.so);
+                }
+                else
+                {
+                    MessageBox.Show("Datos Invalidos");
+                }
+            }
+            catch {
+                MessageBox.Show("Datos Invalidos");
+            }
+
+
+        }
+
+        private void txt_cedula_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

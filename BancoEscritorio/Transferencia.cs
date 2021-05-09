@@ -148,35 +148,47 @@ namespace BancoEscritorio
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-            cliente.MdiParent = this.MdiParent;
-            int operacion = System.Convert.ToInt32(so.saldo) - System.Convert.ToInt32(txt_valor.Text);
-            if (operacion > 0)
+            try
             {
-                
-                so.saldo = System.Convert.ToString(operacion);
-                this.put();
-                this.traeNuevo();
-                int operacion2 = System.Convert.ToInt32(so.saldo) + System.Convert.ToInt32(txt_valor.Text);
-                
-                so.saldo = System.Convert.ToString(operacion2);
-                this.put();
-                this.realizaTransaccion();
-                //cliente.Close();
-                //cliente.Refresca();
-                MessageBox.Show("Transaccion Exitosa");
+                if (System.Convert.ToDouble(txt_numcuenta.Text) > 0 && System.Convert.ToDouble(txt_valor.Text) > 0)
+                {
 
+                    cliente.MdiParent = this.MdiParent;
+                    int operacion = System.Convert.ToInt32(so.saldo) - System.Convert.ToInt32(txt_valor.Text);
+                    if (operacion > 0)
+                    {
+
+                        so.saldo = System.Convert.ToString(operacion);
+                        this.put();
+                        this.traeNuevo();
+                        int operacion2 = System.Convert.ToInt32(so.saldo) + System.Convert.ToInt32(txt_valor.Text);
+
+                        so.saldo = System.Convert.ToString(operacion2);
+                        this.put();
+                        this.realizaTransaccion();
+                        //cliente.Close();
+                        //cliente.Refresca();
+                        MessageBox.Show("Transaccion Exitosa");
+
+                    }
+                    else
+                    {
+
+
+                        //cliente.Close();
+                        //cliente.Show();
+                        MessageBox.Show("Fondos insuficientes");
+                    }
+                    txt_numcuenta.Text = "";
+                    txt_valor.Text = "";
+
+                }
             }
-            else {
-
-
-                //cliente.Close();
-                //cliente.Show();
-                MessageBox.Show("Fondos insuficientes");
+            catch
+            {
+                MessageBox.Show("Datos Invalidos");
             }
-            txt_numcuenta.Text = "";
-            txt_valor.Text = "";
+
 
 
 
