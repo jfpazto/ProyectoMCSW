@@ -6,6 +6,9 @@ using ApiRest.DTO;
 using ApiRest.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.IO;
+using System.Security.Cryptography;
 
 namespace ApiRest.Controllers
 {
